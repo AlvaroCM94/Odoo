@@ -1,0 +1,96 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="libros.libros">
+      <field name="name">libros.libros.tree</field>
+      <field name="model">libros.libros</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="autor"/>
+          <field name="stock"/>
+          <field name="genero"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="libros.libros_form">
+      <field name="name">libros.libros.form</field>
+      <field name="model">libros.libros</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="name"/>
+            <field name="autor"/>
+            <field name="stock"/>
+            <field name="genero"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="libros.autores_tree">
+      <field name="name">libros.autores.tree</field>
+      <field name="model">libros.autores</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="edad"/>
+          <field name="imagen"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="libros.autores_form">
+      <field name="name">libros.autores.form</field>
+      <field name="model">libros.autores</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="imagen" widget="image" height="120px" widht="120px"/> 
+            <field name="name"/>
+            <field name="edad"/>
+            <field name="libros">
+              <tree colspan="2" col="2">
+                <field name="name"/>
+                <field name="autor"/>
+                <field name="stock"/>
+                <field name="genero"/>
+              </tree>
+            </field>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="libros.libros_action_window">
+      <field name="name">libros.libros.action.window</field>
+      <field name="res_model">libros.libros</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="libros.autores_action_window">
+      <field name="name">libros.autores.action.window</field>
+      <field name="res_model">libros.autores</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú principal -->
+
+    <menuitem name="Libros" id="libros.menu_root"/>
+
+    <!-- Submenú -->
+
+    <menuitem name="Libros" id="libros.libros_menu" parent="libros.menu_root"/>
+
+    <!-- Opciones del menú -->
+
+    <menuitem name="Libros" id="libros.libros_menu_libros" parent="libros.libros_menu"
+              action="libros.libros_action_window"/>
+
+    <menuitem name="Autores" id="libros.libros_menu_autores" parent="libros.libros_menu"
+              action="libros.autores_action_window"/>
+
+  </data>
+</odoo>

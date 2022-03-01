@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_libros_libros_gestor,libros.libros.gestor,model_libros_libros,libros.grupo_gestor,1,1,1,1
+access_libros_autores_gestor,libros.autores.gestor,model_libros_autores,libros.grupo_gestor,1,1,1,1
+access_libros_libros_operario,libros.libros.operario,model_libros_libros,libros.grupo_operario,1,0,0,0
+access_libros_autores_operario,libros.autores.operario,model_libros_autores,libros.grupo_operario,1,0,0,0

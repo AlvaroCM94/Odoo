@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <!-- GRUPO GESTOR DE INCIDENCIAS -->
+        <record id="grupo_gestor" model="res.groups">
+            <field name="name">Libros/Gestor libros</field>
+            <field name="comment">Perfil gestor de acceso a los libros</field>
+        </record>
+
+        <!-- GRUPO OPERARIO DE INCIDENCIAS -->
+        <record id="grupo_operario" model="res.groups">
+            <field name="name">Libros/Operario libros</field>
+            <field name="comment">Perfil operario de acceso a los libros</field>
+        </record>
+    </data>
+</odoo>

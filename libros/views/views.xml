@@ -23,6 +23,7 @@
             <field name="autor"/>
             <field name="stock"/>
             <field name="genero"/>
+            <field name="editorial"/>
           </group>
         </form>
       </field>

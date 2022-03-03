@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<odoo>
+    <data>
+        <record model="ir.actions.report" id="libros.libros_autores_report">
+            <field name="name">Reporte Libros</field>
+            <field name="model">libros.autores</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">libros.libros_report_template</field>
+            <field name="report_file">libros.libros_report_template</field>
+            <field name="binding_model_id" ref="libros.model_libros_autores"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

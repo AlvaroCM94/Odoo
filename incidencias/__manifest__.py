@@ -26,6 +26,8 @@
         'views/templates.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/libros_report.xml',
+        'reports/libros_report_view.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
